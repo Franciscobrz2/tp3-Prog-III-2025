@@ -1,0 +1,42 @@
+:root{
+    --color-principal-: rgb(49, 23, 166);
+    --color-secundario-:rgb(239, 246, 246);
+    --color-principal-letras: white;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.error{
+    font-size: large;
+    color: red;
+    border-color: red ;
+}
+
+body{
+    background-color: var(--color-principal-);
+    color: var(--color-principal-letras);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;  
+}
+
+h1{
+    margin-left: 36%;
+}
+h2{
+    font-size:medium ;
+}
+section{
+    width: 100%;
+    max-width: 62rem;
+    box-sizing: border-box;
+}
+fieldset{
+    width: 60rem;
+    height: 17rem;
+    margin-left: 0;
+    height: 100%;
+}
+

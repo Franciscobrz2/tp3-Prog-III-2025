@@ -1,0 +1,73 @@
+:root{
+    --color-principal-: rgb(49, 23, 166);
+    --color-secundario-:rgb(239, 246, 246);
+    --color-principal-letras: white;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.error{
+    font-size: large;
+    color: red;
+    border-color: red ;
+}
+
+.input-error{
+    background-color: rgb(230, 167, 167);
+}
+
+body{
+    background-color: var(--color-principal-);
+    color: var(--color-principal-letras);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;  
+}
+
+h1{
+    margin-left: 30%;
+}
+section{
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+fieldset{
+    width: 15rem;
+    height: 100%;
+    margin-left: 0;
+}
+
+button{
+    background-color:  #f57f10;
+    border-radius: 8px;
+    transition: atransform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    border: none;
+    margin: 1rem;
+    padding: 0.9rem;
+    height: 90%;
+    width: 36%;
+}
+button:hover {
+    background-color: var(--color-secundario-);
+    transform: translateY(-1px) scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input{
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--color-secundario-);
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}

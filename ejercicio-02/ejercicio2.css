@@ -1,0 +1,66 @@
+:root{
+    --color-principal-: rgb(49, 23, 166);
+    --color-secundario-:rgb(239, 246, 246);
+    --color-principal-letras: white;
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.error{
+    font-size: large;
+    color: red;
+    border-color: red ;
+}
+
+body{
+    background-color: var(--color-principal-);
+    color: var(--color-principal-letras);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;  
+}
+
+h1{
+    margin-left: 45%;
+}
+input{
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--color-secundario-);
+    padding: 0.3rem;
+    width: 90%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+button{
+    background-color:  #f57f10;
+    border-radius: 8px;
+    transition: atransform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    border: none;
+    padding: 0.3rem;
+}
+button:hover {
+    background-color: var(--color-secundario-);
+    transform: translateY(-1px) scale(1.02); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+section{
+    width: 100%;
+    max-width: 62rem;
+    box-sizing: border-box;
+}
+fieldset{
+    width: 60rem;
+    height: 17rem;
+    margin-left: 0;
+    height: 100%;
+}
+

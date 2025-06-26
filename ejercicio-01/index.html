@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript1</title>
+    <link rel="stylesheet" href="ejercicio1.css" />
+</head>
+<body>
+    <section>
+        <h1>Calcular</h1>
+        <fieldset>
+            <legend>Formulario</legend>
+            <form id="formulario">
+                <label for="numero1">Numero 1:</label>
+                <input type="number" name="numero1" id="numero1" >
+                <select name="operacion" id="operacion">
+                    <option value="" >Operaciones</option>
+                    <option value="suma">Suma</option>
+                    <option value="resta">Restar</option>
+                    <option value="multiplicar">Multiplicar</option>
+                    <option value="dividir">Dividir</option>
+                </select>
+        
+                <label for="numero2">Numero 2:</label>
+                <input type="number" name="numero2" id="numero2" >
+                <div id="mensaje-error"></div>
+        
+                <button type="submit">Calcular</button>
+            </form>
+            <fieldset id="resultado-fieldset" class="resultado-fieldset oculto">
+                <legend>Resultado</legend>
+                <div id="resultado"></div>
+            </fieldset>
+            
+        </fieldset>
+        
+    </section>
+    <script  src="ejercicio1.js"></script>
+</body>
+</html>

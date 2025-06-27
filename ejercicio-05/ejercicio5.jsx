@@ -1,10 +1,3 @@
-// Desarrollar una página web utilizando HTML y React que contenga un formulario para realizar
-// operaciones entre dos números ingresados mediante campos <input>. La operación a realizar
-// (suma, resta, multiplicación o división) debe seleccionarse mediante un elemento <select>. Al hacer
-// clic en el botón "Calcular", se debe ejecutar la operación seleccionada y mostrar el resultado.
-// Condición especial: Si el usuario selecciona la operación de división, el botón "Calcular" debe
-// deshabilitarse, impidiendo que se realice la operación.
-
 const {useState} = React
 function App(){
 
@@ -19,7 +12,7 @@ function App(){
     
     let res = 0
     let sim = ""
-
+    console.log("operaciones",operaciones)
     switch(operaciones){
       case "sumar":
         res = (numero1) + numero2
@@ -52,6 +45,8 @@ function App(){
     if(!numero1 && !numero2){
       setMensajeNumero("Los campos no pueden estar vacios, ingrese un numero")
       return
+    }else if(!operaciones){
+      setMensajeNumero("Seleccione una operacion")
     }else{
       setMensajeNumero("")
       Calcular()
@@ -65,34 +60,11 @@ function App(){
 
         <fieldset className="formulario">
           <legend>Formulario</legend>
-          <form onSubmit={handleSubmit}>
-
-            <label htmlFor="numero1">Numero 1:</label>
-            <input 
-            type="number"
-            name="numero1"
-            value={numero1}
-            onChange={(e)=>setNumero1(Number(e.target.value))}
+            <Formulario handleSubmit={handleSubmit} numero1={numero1}
+              numero2={numero2} setNumero1={setNumero1} setNumero2={setNumero2}
+              operaciones={operaciones} setOperaciones={setOperaciones}
+              mensajeNumero={mensajeNumero}
             />
-            <br /> 
-            <select name="operaciones" id="operaciones" value={operaciones} onChange={(e)=>setOperaciones(e.target.value)}>
-              <option value="">Operaciones</option>
-              <option value="sumar">Sumar</option>
-              <option value="restar">Restar</option>
-              <option value="multiplicar">Multiplicar</option>
-              <option value="dividir">Dividir</option>
-            </select>
-            <br />
-            <label htmlFor="numero2">Numero 1:</label>
-            <input 
-            type="number"
-            name="numero2"
-            value={numero2}
-            onChange={(e)=>setNumero2(Number(e.target.value))}
-            />
-            <br />
-            <button type="submit" disabled={operaciones==="dividir" && numero2 < 1 }>Calcular</button>
-          </form>
           {mensajeNumero && <p className="error">{mensajeNumero}</p>}
           {simbolo && (
             <fieldset className="resultado">
